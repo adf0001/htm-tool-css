@@ -1,0 +1,18 @@
+.ht-cmd { 
+	color: green; 
+	text-decoration: underline; 
+	cursor: pointer; 
+	font-size: 9pt; 
+} 
+.ht-cmd:hover{ 
+	background:#eeeeee; 
+} 
+.ht-hover:hover{ 
+	background:#eeeeee; 
+} 
+.ht-selected{ 
+	background:lavender; 
+} 
+.ht-selected:hover{ 
+	background:#F0F0FA; 
+}

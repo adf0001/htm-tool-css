@@ -1,0 +1,27 @@
+{
+  "name": "htm-tool-css",
+  "version": "1.0.1",
+  "description": "htm-tool css module",
+  "main": "htm-tool-css.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "htm-tool",
+    "css"
+  ],
+  "author": "fwg",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adf0001/htm-tool-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adf0001/htm-tool-css/issues"
+  },
+  "homepage": "https://github.com/adf0001/htm-tool-css#readme",
+  "dependencies": {
+    "add-css-text": "^1.0.1",
+    "ele-tool": "^1.0.1"
+  }
+}
