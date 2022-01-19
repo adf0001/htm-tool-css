@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/adf0001/htm-tool-css#readme",
   "dependencies": {
-    "add-css-text": "^1.0.1",
-    "ele-tool": "^1.0.1"
+    "add-css-text": "^1.0.1"
   }
 }
