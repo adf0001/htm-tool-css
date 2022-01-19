@@ -7,6 +7,8 @@ var add_css_text = require("add-css-text");
 // basic common css
 add_css_text(require("./res/common.css"), "ht-common-css");
 
+add_css_text(require("./res/entity.css"), "ht-entity-css");
+
 // css selected tool
 var setSelected = function (selectList, unselectList, selected, selectedClass) {
 	if (!selected) { var tmp = selectList; selectList = unselectList; unselectList = tmp; }	//exchange

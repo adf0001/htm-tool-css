@@ -1,0 +1,19 @@
+.ht-entity-icon,.ht-entity-button,.ht-entity-btn{
+	display:inline-block;
+	width:1em;
+	height:1em;
+	font-family: monospace;
+	cursor:pointer;
+	vertical-align:middle;
+	text-align:center;
+	line-height:100%;
+	overflow:hidden;
+}
+.ht-entity-button,.ht-entity-btn{
+	padding:2px;
+	border:1px solid gray;
+	border-radius:10%;
+}
+.ht-entity-icon:hover,.ht-entity-button:hover,.ht-entity-btn:hover{
+	background:#eeeeee;
+}
