@@ -1,4 +1,5 @@
-// global, for html page
+
+//global variable, for html page, refer tpsvr @ npm.
 htm_tool_css = require("../htm-tool-css.js");
 
 module.exports = {
@@ -30,7 +31,6 @@ module.exports = {
 			"";
 	},
 
-
 };
 
 // for html page
@@ -38,4 +38,4 @@ module.exports = {
 if (typeof showResult !== "function") showResult = function (text) { console.log(text); }
 
 //for mocha
-if (typeof describe === "function") describe('mocha-test', function () { for (var i in module.exports) { it(i, module.exports[i]); } });
+if (typeof describe === "function") describe('htm_tool_css', function () { for (var i in module.exports) { it(i, module.exports[i]).timeout(5000); } });
