@@ -3,39 +3,91 @@
 
 var add_css_text = require("add-css-text");
 
-// basic common css
+// css modules
 add_css_text(require("./res/common.css"), "ht-common-css");
-
 add_css_text(require("./res/entity.css"), "ht-entity-css");
 
-// css selected tool
-var setSelected = function (selectList, unselectList, selected, selectedClass) {
-	if (!selected) { var tmp = selectList; selectList = unselectList; unselectList = tmp; }	//exchange
+// css class setting tool
 
-	var i, imax, li;
-	if (selectList) {
-		if (!(selectList instanceof Array)) selectList = [selectList];
+var addClass = function (elList, classList) {
+	//arguments
+	if (!(elList instanceof Array)) elList = [elList];
+	if (!(classList instanceof Array)) classList = [classList];
 
-		imax = selectList.length;
-		for (i = 0; i < imax; i++) {
-			li = selectList[i];
-			if (typeof li === "string") li = document.getElementById(li);
-			li.classList.add(selectedClass || "ht-selected");
-		}
-	}
-
-	if (unselectList) {
-		if (!(unselectList instanceof Array)) unselectList = [unselectList];
-
-		imax = unselectList.length;
-		for (i = 0; i < imax; i++) {
-			li = unselectList[i];
-			if (typeof li === "string") li = document.getElementById(li);
-			li.classList.remove(selectedClass || "ht-selected");
-		}
+	var i, imax = elList.length, j, jmax = classList.length, el;
+	for (i = 0; i < imax; i++) {
+		el = elList[i];
+		if (typeof el === "string") el = document.getElementById(el);
+		el.classList.add("ht");
+		//el.classList.add.apply(el.classList, classList);		//discard, ie don't support multiple parameters
+		for (j = 0; j < jmax; j++) el.classList.add(classList[j]);
 	}
 }
 
-module.exports = {
-	setSelected: setSelected,
-};
+var removeClass = function (elList, classList) {
+	//arguments
+	if (!(elList instanceof Array)) elList = [elList];
+	if (!(classList instanceof Array)) classList = [classList];
+
+	var i, imax = elList.length, j, jmax = classList.length, el;
+	for (i = 0; i < imax; i++) {
+		el = elList[i];
+		if (typeof el === "string") el = document.getElementById(el);
+		//el.classList.remove.apply(el.classList, classList);		//discard, ie don't support multiple parameters
+		for (j = 0; j < jmax; j++) el.classList.remove(classList[j]);
+	}
+}
+
+var toggleClass = function (elList, classList) {
+	//arguments
+	if (!(elList instanceof Array)) elList = [elList];
+	if (!(classList instanceof Array)) classList = [classList];
+
+	var i, imax = elList.length, j, jmax = classList.length, el;
+	for (i = 0; i < imax; i++) {
+		el = elList[i];
+		if (typeof el === "string") el = document.getElementById(el);
+		//el.classList.toggle.apply(el.classList, classList);		//discard, ie don't support multiple parameters
+		for (j = 0; j < jmax; j++) el.classList.toggle(classList[j]);
+	}
+}
+
+//combine
+var setClass = function (elList, addClassList, removeClassList, toggleClassList) {
+	//arguments
+	if (!(elList instanceof Array)) elList = [elList];
+	var i, imax = elList.length, el;
+	for (i = 0; i < imax; i++) {
+		el = elList[i];
+		if (typeof el === "string") elList[i] = document.getElementById(el);
+	}
+
+	//combine call
+	if (addClassList) addClass(elList, addClassList);
+	if (removeClassList) removeClass(elList, removeClassList);
+	if (toggleClassList) toggleClass(elList, toggleClassList);
+}
+
+
+//combine by element
+var setClassByElement = function (classList, addElList, removeElList, toggleElList) {
+	//arguments
+	if (!(classList instanceof Array)) classList = [classList];
+
+	//combine call
+	if (addElList) addClass(addElList, classList);
+	if (removeElList) removeClass(removeElList, classList);
+	if (toggleElList) toggleClass(toggleElList, classList);
+}
+
+//module
+
+module.exports = exports = setClass;
+
+exports.set = setClass;
+exports.setElement = setClassByElement;
+exports.setEl = setClassByElement;
+
+exports.add = addClass;
+exports.remove = removeClass;
+exports.toggle = toggleClass;
