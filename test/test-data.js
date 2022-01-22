@@ -10,6 +10,9 @@ module.exports = {
 	".ht.active": function (done) {
 		return "<span class='ht active'>css .ht.active style sample</span>";
 	},
+	".ht.unselectable": function (done) {
+		return "<span class='ht unselectable'>css .ht.unselectable style sample</span>";
+	},
 	".ht.hover": function (done) {
 		return "<span class='ht hover'>css .ht.hover style sample</span>";
 	},

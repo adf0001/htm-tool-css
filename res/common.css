@@ -9,6 +9,10 @@
 	background:lime;
 }
 
+.ht.unselectable{
+	user-select:none;
+}
+
 /* level 2: dynamic properties */
 
 .ht.hover:hover{

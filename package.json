@@ -1,6 +1,6 @@
 {
   "name": "htm-tool-css",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "htm-tool css module",
   "main": "htm-tool-css.js",
   "scripts": {
