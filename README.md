@@ -18,7 +18,7 @@ npm install htm-tool-css
 <!-- setClass = function (elList, addClassList, removeClassList, toggleClassList), refer css-class-tool, binding 'ht' -->
 <!-- setClassByElement = function (classList, addElList, removeElList, toggleElList) -->
 
-<span class='ht-selected'>cmd .ht-selected style sample</span>
+<span class='ht selected'>css .ht.selected style sample</span>
 <div>
 <span>111 </span><span>222 </span><span>333 </span><span>444 </span>
 <label>
