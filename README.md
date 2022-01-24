@@ -15,7 +15,7 @@ npm install htm-tool-css
 <!-- css .ht.hover -->
 <span class='ht hover'>css .ht.hover style sample</span>
 
-<!-- setClass = function (elList, addClassList, removeClassList, toggleClassList) -->
+<!-- setClass = function (elList, addClassList, removeClassList, toggleClassList), refer css-class-tool, binding 'ht' -->
 <!-- setClassByElement = function (classList, addElList, removeElList, toggleElList) -->
 
 <span class='ht-selected'>cmd .ht-selected style sample</span>

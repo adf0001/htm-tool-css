@@ -1,6 +1,6 @@
 {
   "name": "htm-tool-css",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "htm-tool css module",
   "main": "htm-tool-css.js",
   "scripts": {
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/adf0001/htm-tool-css#readme",
   "dependencies": {
-    "add-css-text": "^1.0.1"
+    "add-css-text": "^1.0.1",
+    "css-class-tool": "^1.0.1"
   }
 }
