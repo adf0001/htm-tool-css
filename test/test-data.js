@@ -1,6 +1,6 @@
 
 //global variable, for html page, refer tpsvr @ npm.
-htm_tool_css = require("../htm-tool-css.js");
+htm_tool_css = require("../index.js");
 
 module.exports = {
 
