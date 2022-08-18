@@ -16,19 +16,19 @@ module.exports = {
 	".ht.hover": function (done) {
 		return "<span class='ht hover'>css .ht.hover style sample</span>";
 	},
-	".ht.selected & set/setEl()": function (done) {
+	".ht.selected & set/setByElement()": function (done) {
 		return "<span class='ht selected'>css .ht.selected style sample</span>" +
 			"<div>" +
 			"<span>111 </span><span>222 </span><span>333 </span><span>444 </span><br>" +
 			"<label><input type=checkbox " +
-			"	onchange=\"var chs=parentNode.parentNode.childNodes;htm_tool_css([chs[0],chs[2]],this.checked?'selected':'',this.checked?'':'selected'); htm_tool_css([chs[1],chs[3]],this.checked?'':'selected',this.checked?'selected':'');\"" +
+			"	onchange=\"var chs=parentNode.parentNode.childNodes;htm_tool_css.setClass([chs[0],chs[2]],this.checked?'selected':'',this.checked?'':'selected'); htm_tool_css.setClass([chs[1],chs[3]],this.checked?'':'selected',this.checked?'selected':'');\"" +
 			"></input>toggle by set()</label><br>" +
 			"<label><input type=checkbox " +
-			"	onchange=\"var chs=parentNode.parentNode.childNodes;htm_tool_css.setEl('selected',this.checked?[chs[0],chs[2]]:[chs[1],chs[3]],this.checked?[chs[1],chs[3]]:[chs[0],chs[2]]);\"" +
-			"></input>toggle by setEl()</label><br>" +
+			"	onchange=\"var chs=parentNode.parentNode.childNodes;htm_tool_css.setByElement('selected',this.checked?[chs[0],chs[2]]:[chs[1],chs[3]],this.checked?[chs[1],chs[3]]:[chs[0],chs[2]]);\"" +
+			"></input>toggle by setByElement()</label><br>" +
 			"<label><input type=checkbox " +
-			"	onchange=\"var chs=parentNode.parentNode.childNodes;htm_tool_css.setEl('selected',null,null,[chs[0],chs[1],chs[2],chs[3]]);\"" +
-			"></input>setEl() toggle</label><br>" +
+			"	onchange=\"var chs=parentNode.parentNode.childNodes;htm_tool_css.setByElement('selected',null,null,[chs[0],chs[1],chs[2],chs[3]]);\"" +
+			"></input>setByElement() toggle</label><br>" +
 			"</div>";
 	},
 	".ht.entity": function (done) {
