@@ -45,6 +45,18 @@ module.exports = {
 			"";
 	},
 
+	"check exports": function (done) {
+		for (var i in htm_tool_css) {
+			if (typeof htm_tool_css[i] === "undefined") { done("undefined: " + i); return; }
+		}
+		done(false);
+
+		console.log(htm_tool_css);
+		var list = "export list: " + Object.keys(htm_tool_css).join(", ");
+		console.log(list);
+		return list;
+	},
+
 };
 
 // for html page
